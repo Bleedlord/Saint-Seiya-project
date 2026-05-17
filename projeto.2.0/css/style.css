@@ -1,0 +1,445 @@
+/* Reset Moderno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffc400; /* Dourado Armadura de Ouro */
+    --gold-gradient: linear-gradient(135deg, #ffe066 0%, #f5b041 50%, #b7950b 100%);
+    --cosmic-dark: #0a0b10; /* Fundo Espacial Profundo */
+    --cosmic-card: #131722; /* Fundo do Card */
+    --light-bg: #0d1117;
+    --text-color: #e2e8f0;
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cosmic-dark);
+    background-image: radial-gradient(circle at 50% 50%, #1a1f3c 0%, #0a0b10 100%); /* Simula o espaço */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Tipografia Geral */
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* AREA DO MENU */
+#caixa_menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(6, 9, 15, 0.95);
+    backdrop-filter: blur(10px); 
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(255, 196, 0, 0.15);
+}
+
+#menu {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    background: var(--gold-gradient);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 217, 0, 0.6);
+    transition: transform 0.5s ease;
+}
+
+#logo:hover {
+    transform: scale(1.15) rotate(15deg);
+}
+
+.item_menu {
+    position: relative;
+    width: auto;
+    min-width: 120px;
+    height: 100%; /* Ajustado de inherit para 100% para melhor consistência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.item_menu a {
+    color: #ffffff;
+}
+
+.item_menu::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gold-gradient); 
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.item_menu:hover a, .item_menu:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+}
+
+.item_menu:hover::after {
+    width: 70%;
+}
+
+/* CABEÇALHO (Hero Section) */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, rgba(6, 9, 15, 0.85) 0%, rgba(26, 31, 60, 0.4) 100%), 
+                      url('../imagens/imagemfundoslogan.png');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    padding-top: 70px;
+}
+
+#caixa_header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+#slogan {
+    background: rgba(19, 23, 34, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 45px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 196, 0, 0.4);
+    max-width: 600px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+#slogan h1 {
+    font-size: 3rem;
+    background: var(--gold-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#slogan p {
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn_header {
+    display: inline-block;
+    background: var(--gold-gradient);
+    color: #000;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(255, 196, 0, 0.4);
+}
+
+.btn_header:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 196, 0, 0.6);
+}
+
+/* SEÇÃO PERSONAGENS (CONTAINER PRINCIPAL) */
+#projeto {
+    padding: 80px 0;
+}
+
+#caixa_projeto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo span {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: var(--gold-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.titulo span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: var(--gold-gradient);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* CONTAINER DOS CARDS DINÂMICOS */
+#cardpersonagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 35px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* ESTILIZAÇÃO COMPLETA DO CARD DE CAVALEIRO */
+.card {
+    background-color: var(--cosmic-card);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 196, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito de Elevação de Cosmo (Hover no Card) */
+.card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(255, 196, 0, 0.8);
+    box-shadow: 0 15px 35px rgba(255, 196, 0, 0.25); /* Aura dourada suave */
+}
+
+/* Foto do Personagem */
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 196, 0, 0.15);
+    transition: var(--transition);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Área Interna de Textos do Card */
+.produtos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: linear-gradient(to bottom, rgba(19,23,34,1) 0%, rgba(10,11,16,1) 100%);
+    flex-grow: 1;
+}
+
+.produtos h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+/* Hover muda o nome do cavaleiro para dourado */
+.card:hover .produtos h2 {
+    color: var(--primary-color);
+}
+
+.produtos p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Destaque nos rótulos de informações */
+.produtos p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* SEÇÃO SOBRE */
+#sobre {
+    padding: 100px 0;
+    background: rgba(13, 17, 23, 0.6);
+}
+
+.conteudo_flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto_sobre {
+    flex: 1;
+}
+
+.texto_sobre h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.texto_sobre p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+.imagem_sobre {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem_sobre img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 196, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* SEÇÃO CONTATOS */
+#contatos {
+    padding: 100px 0;
+}
+
+.grid_contatos {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card_contato {
+    flex: 1;
+    background-color: var(--cosmic-card);
+    color: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 196, 0, 0.1);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.card_contato:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 196, 0, 0.5);
+    box-shadow: 0 10px 25px rgba(255, 196, 0, 0.1);
+}
+
+.card_contato h3 {
+    background: var(--gold-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.card_contato p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #94a3b8;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #06090f;
+    border-top: 1px solid rgba(255, 196, 0, 0.2);
+    padding: 40px 0;
+    text-align: center;
+}
+
+#caixa_footer {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #64748b;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste Responsivo para Mobile */
+@media (max-width: 992px) {
+    .conteudo_flex, .grid_contatos {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    #slogan h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #menu {
+        font-size: 14px;
+    }
+    .item_menu {
+        min-width: unset;
+        padding: 0 10px;
+    }
+    #cardpersonagens {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}

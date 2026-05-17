@@ -1,0 +1,39 @@
+# 🌌 Saint Seiya - Guia dos Cavaleiros
+
+Uma aplicação web dinâmica, responsiva e imersiva dedicada ao universo de **Cavaleiros do Zodíaco**. O projeto renderiza os guerreiros do santuário consumindo uma API REST de forma assíncrona, contando com efeitos visuais modernos que remetem às Armaduras de Ouro e interações sonoras que elevam a experiência do usuário.
+
+## 🔗 Links Úteis
+*   **Acesse o site funcionando:** [🔗 Clique aqui para abrir o site](COLE_AQUI_O_LINK_DA_VERCEL)
+*   **Link da API utilizada:** [🔗 Saint Seiya API](https://back-end-saint-seiya-api.onrender.com/v1/saint-seiya/characters)
+
+---
+
+## 🚀 Funcionalidades
+
+*   **Consumo Assíncrono:** Busca dados em tempo real de mais de 90 personagens diretamente de uma API externa usando `Fetch` e `Async/Await`.
+*   **Design Cósmico & Responsivo:** Interface estilizada com CSS moderno, trazendo efeitos de degradê dourado metalizado (`background-clip: text`) e fundo espacial. Totalmente adaptável para celulares, tablets e computadores.
+*   **Efeito de Elevação de Cosmo (Hover):** Cards interativos com animações fluidas de aproximação e iluminação em aura dourada ao passar o mouse.
+*   **Experiência Sonora:** Reprodução de efeitos sonoros (áudio de impacto de armadura) ao clicar em cada card.
+*   **Sistema de Fallback (Proteção contra erros):** Se o link da imagem de um personagem estiver quebrado ou falhar no carregamento, o sistema substitui automaticamente por uma imagem padrão estilizada, evitando buracos na tela.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+*   **HTML5:** Estruturação semântica da página.
+*   **CSS3:** Estilização avançada, variáveis globais (`:root`), Grid Layout, Flexbox, animações (`@keyframes`) e responsividade.
+*   **JavaScript (ES6+):** Manipulação dinâmica do DOM, requisições HTTP assíncronas e controle de eventos de áudio.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
+├── index.html          # Página principal da aplicação
+├── css/
+│   └── style.css       # Estilização completa e responsividade
+├── js/
+│   └── script.js      # Lógica de fetch da API e efeitos sonoros
+└── public/
+    ├── imagens/        # Imagens locais e assets do projeto
+    └── audio/          # Efeitos sonoros das interações (clique)

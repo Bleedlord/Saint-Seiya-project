@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projeto Cavaleiros dos Zodíaco</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/carregarpersonagens.js" defer type='module'></script>
+    </head>
+    
+    <body>
+        <!-- AREA DO MENU -->
+        <div id="caixa_menu">
+            <div id="menu" class="center">
+                <div id="logo"></div>
+                <div class="item_menu">Home</div>
+                <div class="item_menu">
+                    <a href="#projeto">personagens</a>
+                </div>
+                <div class="item_menu">
+                    <a href="#sobre">Sobre</a>
+                </div>
+                <div class="item_menu">
+                    <a href="#contatos">Contatos</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AREA DO CABEÇALHO -->
+        <div id="header" class="back_image">
+            <div id="caixa_header" class="center">
+                <div id="slogan">
+                    <h1>O quanto você conhece de seus personagens favoritos?</h1>
+                    <p>Explore por este compilado de informações sobre os personagens de Cavaleiro do Zodiaco.</p>
+                    <a href="#projeto" class="btn_header">Explorar Acervo</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SEÇÃO A Projeto -->
+        <div id="projeto">
+            <div class="seta">
+                <a href="#header"> seta </a>
+            </div>
+            <div id="caixa_projeto" class="center">
+                <div class="titulo">
+                    <span>Personagens</span>
+                </div>
+                <div class="conteudo">
+                    <!-- O JavaScript vai injetar os cards exatamente aqui dentro -->
+                    <div class="Cardpersonagens" id="cardpersonagens"></div>
+                </div> <!-- Fechamento correto da div conteudo -->
+            </div> <!-- Fechamento correto da div caixa_projeto -->
+        </div> <!-- Fechamento correto da div projeto -->
+
+        <!-- SEÇÃO SOBRE -->
+        <div id="sobre">
+            <div id="caixa_sobre" class="center">
+                <div class="titulo">
+                    <span>SOBRE MIM</span>
+                </div>
+                <div class="conteudo_flex">
+                    <div class="texto_sobre">
+                        <h2>este projeto serve como forma de demonstrar meus conhecimentos em diferentes linguagens de programação </h2>
+                        <p>nele irá encontrar todo meu conhecimento em logica ,p.o.o,entre outras competências.</p>
+                        <p>Acredito que somente este simples projeto nao seja o basta para avaliar minhas competências, por isso ,lhe convido a visitar outros projetos que ja realizei, (ainda em construção ,mas nao irão se arrepender).</p>
+                    </div>
+                    <div class="imagem_sobre">
+                        <img src="imagens/imageminformacoes.png" alt="Sobre o Projeto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SEÇÃO CONTATOS -->
+        <div id="contatos">
+            <div id="caixa_contatos" class="center">
+                <div class="titulo">
+                    <span>CONTATOS</span>
+                </div>
+                <div class="grid_contatos">
+                    <div class="card_contato">
+                        <h3>Endereço</h3>
+                        <p>Rua Cachoeira Poraquê ,5A<br>São Paulo - SP</p>
+                    </div>
+                    <div class="card_contato">
+                        <h3>Telefone</h3>
+                        <p>(11) 96595-6049</p>
+                    </div>
+                    <div class="card_contato">
+                        <h3>E-mail</h3>
+                        <p>joaopedro.mota1534@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div id="footer">
+            <div id="caixa_footer" class="center">
+                Projeto Cavaleiro Dos Zodíaco - by João Mota 
+            </div>
+        </div>
+    </body>
+</html>
