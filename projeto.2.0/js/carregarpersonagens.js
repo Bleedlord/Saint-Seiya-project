@@ -1,5 +1,4 @@
-// 1. Áudio de teste (mude para o seu local quando o servidor estiver rodando)
-const somClique = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
+const somClique = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
 somClique.volume = 0.5;
 
 function criarCard(personagem) {
