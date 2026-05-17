@@ -70,7 +70,7 @@ a {
     position: relative;
     width: auto;
     min-width: 120px;
-    height: 100%; /* Ajustado de inherit para 100% para melhor consistência */
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
