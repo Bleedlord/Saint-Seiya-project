@@ -1,4 +1,5 @@
-const somClique = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
+
+const somClique = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
 somClique.volume = 0.5;
 
 function criarCard(personagem) {
@@ -7,7 +8,6 @@ function criarCard(personagem) {
 
     const imagemPadrao = "https://placehold.co/300x400/111/fff?text=Saint+Seiya";
     
-    // Corrigido aqui de 'personaje' para 'personagem'
     const imagemInicial = personagem.image ? personagem.image : imagemPadrao;
 
     card.innerHTML = `
@@ -20,8 +20,6 @@ function criarCard(personagem) {
             <p><strong>Constelação:</strong> ${personagem.constellation || ''}</p>
         </div>
     `;
-
-    // Evento de clique protegido contra travamentos
     card.addEventListener('click', () => {
         try {
             somClique.currentTime = 0;
